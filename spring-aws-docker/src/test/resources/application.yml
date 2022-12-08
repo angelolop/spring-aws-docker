@@ -5,7 +5,7 @@ cors:
   originPatterns: http://localhost:8081,https://erudio.com.br,http://localhost:3000
 
 file:
-  upload-dir: /Users/angelo/Desktop
+  upload-dir: /home/runner/work/spring-aws-docker/angelo/Desktop
 
 security:
   jwt:
