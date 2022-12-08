@@ -1,0 +1,37 @@
+server:
+  port: 8085
+
+cors:
+  originPatterns: http://localhost:8081,https://erudio.com.br,http://localhost:3000
+
+file:
+  upload-dir: /Users/angelo/Desktop
+
+security:
+  jwt:
+    token:
+      secret-key: 53cr37
+      expire-lenght: 3600000
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+      show-sql: false
+    servlet:
+      multipart:
+        enabled: true
+        file-size-threshold: 2KB
+        max-file-size: 200MB
+        max-request-size: 215MB
+spring-doc:
+  pathsToMatch:
+    - /auth/**/v1
+    - /api/**/v1/**
+  swagger-ui:
+    use-root-path: true
