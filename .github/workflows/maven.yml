@@ -12,9 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Login to DockerHub
-  # You may pin to the exact commit or the version.
-  # uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+    - name: Login to Docker Hub
       uses: docker/login-action@v2.1.0
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
@@ -27,17 +25,17 @@ jobs:
         distribution: 'adopt'
         cache: maven
         
-    - name: Build Application Jar
+    - name: Build Application JAR
       working-directory: ./spring-aws-docker
       run: mvn clean package
       
-    - name: Docker compose build
+    - name: Docker Compose Build
       working-directory: ./
       run: docker compose build
 
     - name: Push to Docker Hub Container Registry 
       run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:latest ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:${{ github.run_id }}
+        docker tag ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker-with-compose:latest ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:${{ github.run_id }}
         
-        docker push ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:${{ github.run_id }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker-with-compose:${{ github.run_id }}
+        docker push ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker-with-compose:latest
