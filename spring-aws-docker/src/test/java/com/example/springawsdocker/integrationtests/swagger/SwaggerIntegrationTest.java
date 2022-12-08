@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.example.springawsdocker.configs.TestConfigs;
 import com.example.springawsdocker.integrationtests.testcontainers.AbstractIntegrationTest;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+/*@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class SwaggerIntegrationTest extends AbstractIntegrationTest {
 
    @Test
@@ -20,4 +20,4 @@ public class SwaggerIntegrationTest extends AbstractIntegrationTest {
                           .statusCode(200).extract().body().asString();
       assertTrue(content.contains("Swagger UI"));
    }
-}
+}*/

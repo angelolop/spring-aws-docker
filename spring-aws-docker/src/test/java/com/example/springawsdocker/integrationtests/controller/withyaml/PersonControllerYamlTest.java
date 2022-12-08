@@ -23,7 +23,7 @@ import java.io.IOException;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+/*@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class PersonControllerYamlTest extends AbstractIntegrationTest {
 
@@ -331,4 +331,4 @@ public class PersonControllerYamlTest extends AbstractIntegrationTest {
       person.setGender("Male");
       person.setEnabled(true);
    }
-}
+}*/

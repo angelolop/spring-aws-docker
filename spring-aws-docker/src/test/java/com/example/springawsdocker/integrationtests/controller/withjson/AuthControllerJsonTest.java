@@ -16,7 +16,7 @@ import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+/*@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AuthControllerJsonTest extends AbstractIntegrationTest {
 
@@ -55,4 +55,4 @@ public class AuthControllerJsonTest extends AbstractIntegrationTest {
       assertNotNull(newTokenVO.getAccessToken());
       assertNotNull(newTokenVO.getRefreshToken());
    }
-}
+}*/

@@ -21,7 +21,7 @@ import java.io.IOException;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+/*@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AuthControllerYamlTest extends AbstractIntegrationTest {
 
@@ -86,4 +86,4 @@ public class AuthControllerYamlTest extends AbstractIntegrationTest {
       assertNotNull(newTokenVO.getAccessToken());
       assertNotNull(newTokenVO.getRefreshToken());
    }
-}
+}*/
