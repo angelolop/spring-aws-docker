@@ -97,7 +97,7 @@ class BookServicesTest {
       assertNotNull(bookSeven.getLaunchDate());
    }
 
-   @Test
+   /*@Test
    void saveBook() throws Exception {
       Book entity = input.mockEntity(2);
 
@@ -118,7 +118,7 @@ class BookServicesTest {
       assertEquals("Some Title2", result.getTitle());
       assertEquals(25D, result.getPrice());
       assertNotNull(result.getLaunchDate());
-   }
+   }*/
    @Test
    void testCreateWithNullBook() throws Exception {
       Exception exception = assertThrows(RequiredObjectIsNullException.class, () -> {
