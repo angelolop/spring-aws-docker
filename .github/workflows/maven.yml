@@ -35,7 +35,7 @@ jobs:
 
     - name: Push to Docker Hub Container Registry 
       run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:latest ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:${{ github.run_id }}
+        docker tag /spring-aws-docker:latest /spring-aws-docker:${{ github.run_id }}
         
         docker push ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:${{ github.run_id }}
         docker push ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:latest
