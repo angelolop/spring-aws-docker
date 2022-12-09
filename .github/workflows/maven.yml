@@ -32,7 +32,7 @@ jobs:
     - name: Docker Compose Build
       working-directory: ./
       run: docker compose build
-
+#change username to variable in github
     - name: Push to Docker Hub Container Registry 
       run: |
         docker tag angelolop/spring-aws-docker:latest angelolop/spring-aws-docker:${{ github.run_id }}
