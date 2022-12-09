@@ -37,5 +37,5 @@ jobs:
       run: |
         docker tag angelolop/spring-aws-docker:latest angelolop/spring-aws-docker:${{ github.run_id }}
         
-        docker push ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:${{ github.run_id }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/spring-aws-docker:latest
+        docker push angelolop/spring-aws-docker:${{ github.run_id }}
+        docker push angelolop/spring-aws-docker:latest
